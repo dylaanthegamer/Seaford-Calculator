@@ -1,0 +1,262 @@
+<HTML>
+<head>
+
+<script type="text/javascript">
+function displynum(n2){
+    calcform.txt1.value =calcform.txt1.value+ n2;
+   
+     
+    
+}
+
+    
+function sinFunc(){
+    var x= Math.PI/180;
+    var a= calcform.txt1.value ;
+    a= a*x;
+    calcform.txt1.value = Math.sin(a);
+}
+    
+function InsinFunc(){
+    var x= Math.asin(calcform.txt1.value);
+    var j= Math.PI/180;
+     calcform.txt1.value= x/j;
+}
+   
+function cosFunc(){
+    var x= Math.PI/180;
+    var a= calcform.txt1.value ;
+    a= a*x;
+    calcform.txt1.value = Math.cos(a);
+}
+    
+function IncosFunc(){
+    var x= Math.acos(calcform.txt1.value);
+    var j= Math.PI/180;
+     calcform.txt1.value= x/j;
+   
+}
+    
+function tanFunc(){
+    var x= Math.PI/180;
+    var a= calcform.txt1.value ;
+    a= a*x;
+    calcform.txt1.value = Math.tan(a);
+}
+    
+function IntanFunc(){
+    var x= Math.atan(calcform.txt1.value);
+    var j= Math.PI/180;
+     calcform.txt1.value= x/j;
+   
+}
+    
+function rtFunc(){
+var h = prompt("Please enter the root you want", "i.e 4");
+calcform.txt1.value = Math.pow(calcform.txt1.value , 1/h);
+}
+
+function piFunc(){
+    c= Math.PI;
+    displynum(c)
+}
+    
+function delFunc() {
+    calcform.txt1.value =    calcform.txt1.value.substring(0, calcform.txt1.value.length - 1);
+}
+    
+function powFunc(){
+var h = prompt("Please enter the power", "i.e 4");
+calcform.txt1.value = Math.pow(calcform.txt1.value , h);
+    
+}
+    
+var savenum1 = 0;
+function saveFunc1(){
+savenum1 = calcform.txt1.value;
+}
+    
+function prodFunc1(){
+prodnum1 = savenum1;
+displynum(prodnum1)
+}
+    
+var savenum2 = 0;
+    
+function saveFunc2(){
+savenum2 = calcform.txt1.value;
+}
+    
+function prodFunc2(){
+prodnum2 = savenum2;
+displynum(prodnum2)
+}
+
+    
+var savenum3 = 0;
+    
+function saveFunc3(){
+savenum3 = calcform.txt1.value;
+}
+    
+function prodFunc3(){
+prodnum3 = savenum3;
+displynum(prodnum3)
+}
+    
+function offFunc(){
+        window.location.pathname ="C:/Users/Dylan/Desktop/Computing 2017/Coding Projects Year 12/Calculator Project 2017/index3.html";
+    }
+</script>
+    <style>
+        
+        form{
+            border-style: solid;
+            border-radius: 25px;
+            border-width: 12px;
+            border-left-width: 10px;
+            border-right-width: 10px;
+            width: 350;
+            height: 700;
+            background: #1f2c44;
+            margin: 100px;
+            padding: 25px
+        }
+        
+        input {width: 320;
+        height: 100;
+        border-radius: 30px;
+        }
+        
+        body{
+        background-color: #3a7242
+        }
+        
+        .button1{ 
+        background-color: lightgray;
+        border: none;
+        width: 60;
+        height: 50;
+        color: black;
+        font-size: 20px;
+        border-radius: 30px;
+        }
+        
+        .button2{ background-color: orangered;
+        border: none;
+        width: 60;
+        height: 50;
+        color: black;
+        font-size: 20px;
+        border-radius: 30px;
+        }
+        
+        .button3{ background-color: red;
+        border: none;
+        width: 60;
+        height: 50;
+        color: black;
+        font-size: 20px;
+        border-radius: 30px;
+        }
+        
+        
+        .button5{ background-color: gray;
+        border: none;
+        width: 50;
+        height: 50;
+        color: black;
+        font-size: 20px;
+        border-radius: 30px;
+        }
+        
+        .button6{ background-color: gray;
+        border: none;
+        width: 103;
+        height: 50;
+        color: black;
+        font-size: 20px;
+        border-radius: 30px;        
+        }
+        
+          .button8{ background-color: gray;
+        border: none;
+        width: 206;
+        height: 50;
+        color: black;
+        font-size: 20px;
+        border-radius: 30px;        
+        }
+        
+        
+        .button7{ background-color: lightgray;
+        border: none;
+        width: 103;
+        height: 50;
+        color: black;
+        font-size: 20px;
+        border-radius: 30px;
+        }
+</style>
+</head>
+<center>
+<body>
+<form name=calcform>
+<div class="slidecontainer">
+<input id="test" type=text  name=txt1  style="text-align:left; font-size: 20px; cursor: text; ">
+
+
+<p></p>
+<input type=button class=button1 name=divbtn1 value=/ onclick="displynum(divbtn1.value)">
+<input type=button class=button1 name=btnroot value=^r onclick="rtFunc()">
+<input type=button class=button1 name=btnpr value="^" onclick="powFunc()">
+<input type=button class=button1 name=btnpr2 value=ON onclick="">
+<input type=button class=button1 name=btnpr4 value=OFF onclick="offFunc()">
+<p></p>   
+<input type=button class=button1 name=btnsin value= "sin()" onclick="sinFunc()">
+<input type=button class=button1 name=btncos value= "cos()" onclick="cosFunc()">
+<input type=button class=button1 name=btntan value= "tan()" onclick="tanFunc()">
+<input type=button class=button1 name=btnbrao value=( onclick="displynum(btnbrao.value)">
+<input type=button class=button1 name=btnbrac value=) onclick="displynum(btnbrac.value)">
+<p></p>
+<input type="button" class=button7 name=btnsin1 value= "asin()" onclick="InsinFunc()">
+<input type="button" class=button7 name=btncos1 value= "acos()" onclick="IncosFunc()">
+<input type="button" class=button7 name=btntan1 value= "atan()" onclick="IntanFunc()">
+<p></p>
+<input type=button class=button1 name=btn7 value=7 onclick="displynum(btn7.value)">
+<input type=button class=button1 name=btn8 value=8 onclick="displynum(btn8.value)">
+<input type=button class=button1 name=btn9 value=9 onclick="displynum(btn9.value)">
+<input type=button class=button2 name=btndel value="DEL" onclick="delFunc()">
+<input type="reset" class=button2 value="AC">
+<p></p>
+<input type=button class=button1 name=btn4 value=4 onclick="displynum(btn4.value)">
+<input type=button class=button1 name=btn5 value=5 onclick="displynum(btn5.value)">
+<input type=button class=button1 name=btn6 value=6 onclick="displynum(btn6.value)">
+<input type=button class=button1 name=btnmul value=* onclick="displynum(btnmul.value)">
+<input type=button class=button1 name=divbtn2 value=/ onclick="displynum(divbtn2.value)">
+<p></p>
+<input type=button class=button1 name=btn1 value=1 onclick="displynum(btn1.value)">
+<input type=button class=button1 name=btn2 value=2 onclick="displynum(btn2.value)">
+<input type=button class=button1 name=btn3 value=3 onclick="displynum(btn3.value)">
+<input type=button class=button1 name=addbtn value=+ onclick="displynum(addbtn.value)">
+<input type=button class=button1 name=subbtn value=- onclick="displynum(subbtn.value)">
+<p></p>
+<input type=button class=button1 name=btn0 value=0 onclick="displynum(btn0.value)">
+<input type=button class=button1 name=btnpot value=. onclick="displynum(btnpot.value)">
+<input type=button class=button1 name=btnpow value="e" onclick="displynum(btnpow.value)">
+<input type=button class=button1 name=btnpi value=π onclick="piFunc()">
+<input type=button class=button1 name=equalbtn value="=" onclick="txt1.value = eval(txt1.value)">
+<p></p>
+<input type=button class=button6 name=btnsave1 value="Save 1" onclick="saveFunc1()">
+<input type=button class=button6 name=btnsave2 value="Save 2" onclick="saveFunc2()">
+<input type=button class=button6 name=btnsave3 value="Save 3" onclick="saveFunc3()">
+<p></p>
+<input type=button class=button6 name=btnprod1 value="Produce 1" onclick="prodFunc1()">
+<input type=button class=button6 name=btnprod2 value="Produce 2" onclick="prodFunc2()">
+<input type=button class=button6 name=btnprod3 value="Produce 3" onclick="prodFunc3()">
+<p></p>
+</div>
+</form>
+</body>
+</center>
+</HTML>
